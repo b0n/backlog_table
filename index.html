@@ -1,0 +1,24 @@
+<textarea id="txt1" cols="100" rows="10">
++-----+-------+---------+
+| id  | title | preview |
++-----+-------+---------+
+|  93 | 0001  |       0 |
+|  94 | 003   |       0 |
+|  96 | 004   |       0 |
+| 111 | aaa   |       0 |
+| 114 | abc   |       0 |
++-----+-------+---------+
+</textarea>
+<button onclick="convert()">convert</button>
+<textarea id="txt2" cols="100" rows="10">
+| First Header  | Second Header | Third Header |
+| ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+</textarea>
+<script>
+function convert() {
+  const txt1 = document.getElementById("txt1").value;
+  document.getElementById('txt2').value = txt1;
+}
+</script>
