@@ -19,6 +19,18 @@
 <script>
 function convert() {
   const txt1 = document.getElementById("txt1").value;
-  document.getElementById('txt2').value = txt1;
+
+  let txt2 = txt1;
+  let regex = /^\+-/gi;
+  regex = /\+/gi;
+  txt2 = txt2.replace(regex, ' | ');
+
+  regex = /\n \|/gi;
+  txt2 = txt2.replace(regex, '\n|');
+
+  regex = /\| \n/gi;
+  txt2 = txt2.replace(regex, '|\n');
+
+  document.getElementById('txt2').value = txt2;
 }
 </script>
